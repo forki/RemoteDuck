@@ -13,7 +13,7 @@ namespace RemoteDuck
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RemoteDuck());
+            Application.Run(new RemoteDuckForm());
         }
     }
 }

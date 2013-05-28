@@ -62,11 +62,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RemoteDuck.cs">
+    <Compile Include="RemoteDuckForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RemoteDuck.Designer.cs">
-      <DependentUpon>RemoteDuck.cs</DependentUpon>
+    <Compile Include="RemoteDuckForm.Designer.cs">
+      <DependentUpon>RemoteDuckForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,8 +80,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RemoteDuck.resx">
-      <DependentUpon>RemoteDuck.cs</DependentUpon>
+    <EmbeddedResource Include="RemoteDuckForm.resx">
+      <DependentUpon>RemoteDuckForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
