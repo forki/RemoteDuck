@@ -11,14 +11,9 @@ namespace RemoteDuck.Model
             _startTime = DateTime.Now;
         }
 
-        public double ElapsedTime
+        public TimeSpan ElapsedTime
         {
-            get { return (DateTime.Now - _startTime).TotalSeconds; }
-        }
-
-        public string GetElapsedTimeText()
-        {
-            return string.Format("Runtime: {0}s", Math.Round(ElapsedTime));
+            get { return DateTime.Now - _startTime; }
         }
     }
 }

@@ -7,19 +7,23 @@ namespace RemoteDuck
     public partial class RemoteDuckForm : Form
     {
         readonly Runtime _runtime;
+        IdleTimeDetector _idleTimeDetector;
 
         public RemoteDuckForm()
         {
             InitializeComponent();
-            toolStripStatusLabel1.Text = "";
+            elapsedTimeLabel.Text = "";
+            idleTimeLabel.Text = "";
             _runtime = new Runtime();
             TopMost = true;
             timer1.Enabled = true;
+            _idleTimeDetector = new IdleTimeDetector();
         }
 
         void TimerTicked(object sender, EventArgs e)
         {
-            toolStripStatusLabel1.Text = _runtime.GetElapsedTimeText();
+            elapsedTimeLabel.Text = Formatter.GetElapsedTimeText(_runtime.ElapsedTime);
+            idleTimeLabel.Text = Formatter.GetIdleTimeText(_idleTimeDetector.GetIdleTime());
         }
     }
 }

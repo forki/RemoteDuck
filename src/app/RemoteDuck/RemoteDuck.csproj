@@ -62,6 +62,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Formatter.cs" />
+    <Compile Include="Model\IdleTimeDetector.cs" />
     <Compile Include="Model\Loader.cs" />
     <Compile Include="RemoteDuckForm.cs">
       <SubType>Form</SubType>

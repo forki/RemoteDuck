@@ -36,8 +36,9 @@
             this.userTextBox = new System.Windows.Forms.TextBox();
             this.messageTextBox = new System.Windows.Forms.TextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.elapsedTimeLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.idleTimeLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tableLayoutPanel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -102,23 +103,30 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
+            this.elapsedTimeLabel,
+            this.idleTimeLabel});
             this.statusStrip1.Location = new System.Drawing.Point(0, 59);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(422, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // toolStripStatusLabel1
+            // elapsedTimeLabel
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            this.elapsedTimeLabel.Name = "toolStripStatusLabel1";
+            this.elapsedTimeLabel.Size = new System.Drawing.Size(118, 17);
+            this.elapsedTimeLabel.Text = "elapsedTimeLabel";
             // 
             // timer1
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.TimerTicked);
+            // 
+            // idleTimeLabel
+            // 
+            this.idleTimeLabel.Name = "toolStripStatusLabel2";
+            this.idleTimeLabel.Size = new System.Drawing.Size(118, 17);
+            this.idleTimeLabel.Text = "idleTimeLabel";
             // 
             // RemoteDuckForm
             // 
@@ -151,8 +159,9 @@
         private System.Windows.Forms.TextBox userTextBox;
         private System.Windows.Forms.TextBox messageTextBox;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel elapsedTimeLabel;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripStatusLabel idleTimeLabel;
     }
 }
 
