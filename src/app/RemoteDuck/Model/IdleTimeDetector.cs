@@ -8,19 +8,19 @@ namespace RemoteDuck.Model
     public class IdleTimeDetector
     {
         readonly Dictionary<DateTime, TimeSpan> _idleTimes;
-        readonly int _sampleTime;
+        readonly TimeSpan _throttleTime;
 
         public IdleTimeDetector()
         {
             _idleTimes = new Dictionary<DateTime, TimeSpan>();
-            _sampleTime = 2;
+            _throttleTime = TimeSpan.FromMinutes(1);
         }
 
         public TimeSpan GetIdleTime()
         {
             _idleTimes.Add(DateTime.Now, GetCurrentIdleTime());
 
-            var time = DateTime.Now.Subtract(TimeSpan.FromMinutes(_sampleTime));
+            var time = DateTime.Now.Subtract(_throttleTime);
             foreach (var key in _idleTimes.Keys.Where(x => x < time).ToList())
                 _idleTimes.Remove(key);
 
