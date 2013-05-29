@@ -14,12 +14,15 @@ namespace RemoteDuck.Model
             if (Application.StartupPath == tempPath)
                 return true;
 
+            if (!Directory.Exists(tempPath))
+                Directory.CreateDirectory(tempPath);
+
             DeleteAllOldInstances(tempPath, app);
 
             var sourceFileName = Path.Combine(Application.StartupPath, app.Name);
             var destFileName = GetDestFileName(app.Name, tempPath);
 
-            CopyApplication(tempPath, sourceFileName, destFileName);
+            File.Copy(sourceFileName, destFileName, false);
             Process.Start(destFileName);
             return false;
         }
@@ -36,14 +39,6 @@ namespace RemoteDuck.Model
                 {
                 }
             }
-        }
-
-        static void CopyApplication(string tempPath, string sourceFileName, string destFileName)
-        {
-            if (!Directory.Exists(tempPath))
-                Directory.CreateDirectory(tempPath);
-
-            File.Copy(sourceFileName, destFileName, false);
         }
 
         static string GetDestFileName(string appName, string tempPath)
