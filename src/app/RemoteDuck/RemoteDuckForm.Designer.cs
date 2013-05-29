@@ -58,7 +58,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(552, 52);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(405, 52);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -86,16 +86,18 @@
             this.userTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.userTextBox.Location = new System.Drawing.Point(62, 3);
             this.userTextBox.Name = "userTextBox";
-            this.userTextBox.Size = new System.Drawing.Size(487, 20);
+            this.userTextBox.Size = new System.Drawing.Size(340, 20);
             this.userTextBox.TabIndex = 2;
+            this.userTextBox.Text = "Unknown";
             // 
             // messageTextBox
             // 
             this.messageTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.messageTextBox.Location = new System.Drawing.Point(62, 29);
             this.messageTextBox.Name = "messageTextBox";
-            this.messageTextBox.Size = new System.Drawing.Size(487, 20);
+            this.messageTextBox.Size = new System.Drawing.Size(340, 20);
             this.messageTextBox.TabIndex = 3;
+            this.messageTextBox.Text = "This session is taken! Please contact the user above.";
             // 
             // statusStrip1
             // 
@@ -103,7 +105,7 @@
             this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 59);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(572, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(422, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -122,15 +124,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 81);
+            this.ClientSize = new System.Drawing.Size(422, 81);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "RemoteDuckForm";
+            this.Opacity = 0.8D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RemoteDuckForm";
+            this.Text = "The RemoteDuck says: Don\'t quack with this session!";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);

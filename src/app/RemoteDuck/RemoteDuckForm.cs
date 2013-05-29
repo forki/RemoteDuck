@@ -13,10 +13,8 @@ namespace RemoteDuck
             InitializeComponent();
             toolStripStatusLabel1.Text = "";
             _runtime = new Runtime();
+            TopMost = true;
             timer1.Enabled = true;
-            Text = "The RemoteDuckForm says: Don't quack with this session!";
-            userTextBox.Text = "Unknown";
-            messageTextBox.Text = "This session is taken! Please contact the user above.";
         }
 
         void TimerTicked(object sender, EventArgs e)
