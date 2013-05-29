@@ -9,9 +9,9 @@ namespace RemoteDuck.Model
 
         public static string Describe(TimeSpan t)
         {
-            int[] ints ={t.Days,t.Hours,t.Minutes,t.Seconds};
+            int[] ints = {t.Days, t.Hours, t.Minutes, t.Seconds};
 
-            double[] doubles ={t.TotalDays,t.TotalHours,t.TotalMinutes,t.TotalSeconds};
+            double[] doubles = {t.TotalDays, t.TotalHours, t.TotalMinutes, t.TotalSeconds};
 
             var firstNonZero = ints
                 .Select((value, index) => new {value, index})

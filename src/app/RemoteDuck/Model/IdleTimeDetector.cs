@@ -13,7 +13,7 @@ namespace RemoteDuck.Model
         public IdleTimeDetector()
         {
             _idleTimes = new Dictionary<DateTime, TimeSpan>();
-            _sampleTime = 5;
+            _sampleTime = 2;
         }
 
         public TimeSpan GetIdleTime()

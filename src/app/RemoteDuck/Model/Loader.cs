@@ -27,7 +27,7 @@ namespace RemoteDuck.Model
             return false;
         }
 
-        static void DeleteAllOldInstances(string tempPath, FileInfo app)
+        static void DeleteAllOldInstances(string tempPath, FileSystemInfo app)
         {
             foreach (var file in Directory.GetFiles(tempPath).Where(x => x.Contains(app.Name)))
             {
@@ -46,7 +46,7 @@ namespace RemoteDuck.Model
             var i = 0;
             var destFileName = Path.Combine(tempPath, appName);
             while (File.Exists(destFileName))
-                destFileName = Path.Combine(tempPath, "_" + i++ + appName);
+                destFileName = Path.Combine(tempPath, string.Format("_{0}_{1}", i++, appName));
 
             return destFileName;
         }
