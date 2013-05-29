@@ -97,7 +97,7 @@
             this.messageTextBox.Name = "messageTextBox";
             this.messageTextBox.Size = new System.Drawing.Size(340, 20);
             this.messageTextBox.TabIndex = 3;
-            this.messageTextBox.Text = "This session is taken! Please contact the user above.";
+            this.messageTextBox.Text = "This session is currently in use! Please contact the user above.";
             // 
             // statusStrip1
             // 

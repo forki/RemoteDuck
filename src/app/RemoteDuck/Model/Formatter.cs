@@ -8,7 +8,7 @@ namespace RemoteDuck.Model
     {
         public static string GetIdleTimeText(TimeSpan idleTime)
         {
-            return string.Format("Idle since {0}", FriendlyTimeDescription.Describe(idleTime));
+            return string.Format("Idle for {0}", FriendlyTimeDescription.Describe(idleTime));
         }
     }
 }

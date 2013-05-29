@@ -18,12 +18,12 @@ namespace RemoteDuck.Model
                 .FirstOrDefault(x => x.value != 0);
 
             if (firstNonZero == null)
-                return "now";
+                return "0 seconds";
 
             var i = firstNonZero.index;
             var prefix = (i >= 3) ? "" : "about ";
             var quantity = (int) Math.Round(doubles[i]);
-            return prefix + Tense(quantity, Names[i]) + " ago";
+            return prefix + Tense(quantity, Names[i]);
         }
 
         public static string Tense(int quantity, string noun)
