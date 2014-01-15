@@ -14,6 +14,7 @@ namespace RemoteDuck
         {
             InitializeComponent();
             idleTimeLabel.Text = "";
+            versionLabel.Text = "Version: 0.2";
             TopMost = true;
             timer1.Enabled = true;
             _idleTimeDetector = new IdleTimeDetector();
@@ -33,7 +34,7 @@ namespace RemoteDuck
             idleTimeLabel.Text = Formatter.GetIdleTimeText(_idleTimeDetector.GetIdleTime());
         }
 
-        private void FormClosed(object sender, FormClosedEventArgs e)
+        private void OnFormClosed(object sender, FormClosedEventArgs e)
         {
             NativeMethods.SetThreadExecutionState(_executionState);
         }

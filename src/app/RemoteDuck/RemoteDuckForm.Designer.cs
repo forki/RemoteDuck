@@ -38,6 +38,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.idleTimeLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.versionLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tableLayoutPanel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -102,7 +103,8 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.idleTimeLabel});
+            this.idleTimeLabel,
+            this.versionLabel});
             this.statusStrip1.Location = new System.Drawing.Point(0, 59);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(422, 22);
@@ -120,6 +122,13 @@
             this.timer1.Interval = 5000;
             this.timer1.Tick += new System.EventHandler(this.TimerTicked);
             // 
+            // versionLabel
+            // 
+            this.versionLabel.Name = "toolStripStatusLabel1";
+            this.versionLabel.Size = new System.Drawing.Size(118, 17);
+            this.versionLabel.Text = "versionLabel";
+            this.versionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // RemoteDuckForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -134,7 +143,7 @@
             this.Opacity = 0.8D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "The RemoteDuck says: Don\'t quack with this session!";
-            base.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormClosed);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OnFormClosed);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -154,6 +163,7 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripStatusLabel idleTimeLabel;
+        private System.Windows.Forms.ToolStripStatusLabel versionLabel;
     }
 }
 
