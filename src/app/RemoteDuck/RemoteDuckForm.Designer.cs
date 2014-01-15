@@ -134,6 +134,7 @@
             this.Opacity = 0.8D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "The RemoteDuck says: Don\'t quack with this session!";
+            base.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormClosed);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);

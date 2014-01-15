@@ -8,6 +8,8 @@ namespace RemoteDuck
     {
         readonly IdleTimeDetector _idleTimeDetector;
 
+        private readonly uint _executionState;
+
         public RemoteDuckForm()
         {
             InitializeComponent();
@@ -16,6 +18,9 @@ namespace RemoteDuck
             timer1.Enabled = true;
             _idleTimeDetector = new IdleTimeDetector();
             CheckIdleTime();
+
+            // Set new state to prevent system sleep
+            _executionState = NativeMethods.SetThreadExecutionState(NativeMethods.ES_CONTINUOUS | NativeMethods.ES_SYSTEM_REQUIRED);
         }
 
         void TimerTicked(object sender, EventArgs e)
@@ -26,6 +31,11 @@ namespace RemoteDuck
         void CheckIdleTime()
         {
             idleTimeLabel.Text = Formatter.GetIdleTimeText(_idleTimeDetector.GetIdleTime());
+        }
+
+        private void FormClosed(object sender, FormClosedEventArgs e)
+        {
+            NativeMethods.SetThreadExecutionState(_executionState);
         }
     }
 }

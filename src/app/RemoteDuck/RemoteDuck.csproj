@@ -66,6 +66,7 @@
     <Compile Include="Model\FriendlyTimeDescription.cs" />
     <Compile Include="Model\IdleTimeDetector.cs" />
     <Compile Include="Model\Loader.cs" />
+    <Compile Include="Model\NativeMethods.cs" />
     <Compile Include="RemoteDuckForm.cs">
       <SubType>Form</SubType>
     </Compile>
