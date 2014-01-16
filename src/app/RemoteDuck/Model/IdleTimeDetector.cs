@@ -18,7 +18,7 @@ namespace RemoteDuck.Model
 
         public TimeSpan GetIdleTime()
         {
-            _idleTimes.Add(DateTime.Now, GetCurrentIdleTime());
+            _idleTimes[DateTime.Now] = GetCurrentIdleTime();
 
             var time = DateTime.Now.Subtract(_throttleTime);
             foreach (var key in _idleTimes.Keys.Where(x => x < time).ToList())
