@@ -14,7 +14,7 @@ namespace RemoteDuck
         {
             InitializeComponent();
             idleTimeLabel.Text = "";
-            versionLabel.Text = "Version: 0.2";
+            versionLabel.Text = "Version: 0.3";
             TopMost = true;
             timer1.Enabled = true;
             _idleTimeDetector = new IdleTimeDetector();
