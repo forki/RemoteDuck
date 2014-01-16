@@ -21,7 +21,7 @@ namespace RemoteDuck
             CheckIdleTime();
 
             // Set new state to prevent system sleep
-            _executionState = NativeMethods.SetThreadExecutionState(NativeMethods.ES_CONTINUOUS | NativeMethods.ES_SYSTEM_REQUIRED);
+            _executionState = NativeMethods.SetThreadExecutionState(NativeMethods.ES_CONTINUOUS | NativeMethods.ES_SYSTEM_REQUIRED);          
         }
 
         void TimerTicked(object sender, EventArgs e)
@@ -37,6 +37,12 @@ namespace RemoteDuck
         private void OnFormClosed(object sender, FormClosedEventArgs e)
         {
             NativeMethods.SetThreadExecutionState(_executionState);
+        }
+
+        private void OnFirstShown(object sender, EventArgs e)
+        {
+            Top = Screen.PrimaryScreen.Bounds.Height - Height - 100 ;
+            Left = Screen.PrimaryScreen.Bounds.Width - Width - 30;
         }
     }
 }

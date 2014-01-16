@@ -37,8 +37,8 @@
             this.messageTextBox = new System.Windows.Forms.TextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.idleTimeLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.versionLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -117,17 +117,17 @@
             this.idleTimeLabel.Size = new System.Drawing.Size(81, 17);
             this.idleTimeLabel.Text = "idleTimeLabel";
             // 
+            // versionLabel
+            // 
+            this.versionLabel.Name = "versionLabel";
+            this.versionLabel.Size = new System.Drawing.Size(73, 17);
+            this.versionLabel.Text = "versionLabel";
+            this.versionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // timer1
             // 
             this.timer1.Interval = 5000;
             this.timer1.Tick += new System.EventHandler(this.TimerTicked);
-            // 
-            // versionLabel
-            // 
-            this.versionLabel.Name = "toolStripStatusLabel1";
-            this.versionLabel.Size = new System.Drawing.Size(118, 17);
-            this.versionLabel.Text = "versionLabel";
-            this.versionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // RemoteDuckForm
             // 
@@ -141,9 +141,9 @@
             this.MaximizeBox = false;
             this.Name = "RemoteDuckForm";
             this.Opacity = 0.8D;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "The RemoteDuck says: Don\'t quack with this session!";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OnFormClosed);
+            this.Shown += new System.EventHandler(this.OnFirstShown);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
