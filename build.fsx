@@ -38,9 +38,7 @@ Target "AssemblyInfo" (fun _ ->
 )
 
 // --------------------------------------------------------------------------------------
-// Clean build results & restore NuGet packages
-
-Target "RestorePackages" RestorePackages
+// Clean build results 
 
 Target "Clean" (fun _ ->
     CleanDirs ["bin"; "temp"; nugetDir]
@@ -73,15 +71,17 @@ FinalTarget "CloseTestRunner" (fun _ ->
     ProcessHelper.killProcess "nunit-agent.exe"
 )
 
-Target "Release" DoNothing
+Target "Release" (fun _ ->
+  ".bin/RemoteDuck.exe"
+  |> CopyFile @"R:\Lizenzen"
+)
 
 // --------------------------------------------------------------------------------------
 // Run all targets by default. Invoke 'build <Target>' to override
 
 Target "All" DoNothing
 
-"Clean"
-  ==> "RestorePackages"
+"Clean"  
   ==> "AssemblyInfo"
   ==> "Build"
   ==> "All"
