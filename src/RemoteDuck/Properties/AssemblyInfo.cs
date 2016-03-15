@@ -3,7 +3,7 @@ using System.Reflection;
 
 [assembly: AssemblyTitleAttribute("RemoteDuck")]
 [assembly: AssemblyProductAttribute("RemoteDuck")]
-[assembly: AssemblyDescriptionAttribute("Various type providers for management of the machine.")]
+[assembly: AssemblyDescriptionAttribute("RemoteDuck is a tool which allows you to show that a remote session is blocked.")]
 [assembly: AssemblyVersionAttribute("0.4.0")]
 [assembly: AssemblyFileVersionAttribute("0.4.0")]
 namespace System {

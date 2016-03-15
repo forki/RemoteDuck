@@ -1,0 +1,23 @@
+type project
+owners
+    Steffen Forkmann
+authors 
+    Steffen Forkmann
+projectUrl
+    http://github.com/forki/RemoteDuck
+iconUrl
+    https://raw.githubusercontent.com/forki/RemoteDuck/master/docs/files/img/logo.png
+licenseUrl
+    http://github.com/forki/RemoteDuck/blob/master/LICENSE.txt
+requireLicenseAcceptance
+    false
+copyright
+    Copyright 2015
+tags
+    RDP remote duck
+summary
+    RemoteDuck is a tool which allows you to show that a remote session is blocked.
+description
+    RemoteDuck is a tool which allows you to show that a remote session is blocked.
+
+
